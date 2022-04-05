@@ -1,0 +1,565 @@
+$alto_imagen: 100%;
+$acho_imagen: 100%;
+@mixin estiloTrayectoriaImagen{
+    height: $alto_imagen;
+    width: $acho_imagen;
+    border-radius: 2%;
+}
+
+*{
+    letter-spacing: .1rem;
+    line-height: 2.0;
+  }
+  
+
+  
+  header {
+    background-image: linear-gradient(#c2bfbf, white);
+    text-align: center;
+     }
+  
+  h1 {
+    animation-duration: 2s;
+    animation-name: fadeIn; }
+  
+  h2 {
+    animation-name: fadeIn;
+    animation-duration: 1s; }
+  
+  .logo {
+    animation: bounceInRight;
+    animation-duration: 1s; }
+  
+  a {
+    text-decoration: none; }
+  #presentacion{
+    text-align: justify;
+  }
+  #primer-contenedor {
+    height: 100%;
+    width: 100%;
+    padding-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+    background-image: linear-gradient(grey, #c2bfbf);
+    font-size: larger; }
+  
+  #imagenHome{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+    #textoDiv{
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+
+  #segundo-contenedor {
+    @extend #primer-contenedor;
+    text-align: justify; }
+  
+  .trayectoria-img {
+    @include estiloTrayectoriaImagen; }
+  
+  .trayectoria-img1 {
+    @include estiloTrayectoriaImagen; }
+  
+  .trayectoria-img2 {
+    @include estiloTrayectoriaImagen; }
+  
+  .row {
+    height: 100%;
+    margin-bottom: 20px; }
+  
+  ul {
+    height: 40px;
+    display: flex;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    justify-content: space-around;
+    align-content: center !important;
+    padding-right: 5%; }
+    
+    ul li:hover {
+      border-color: black;
+      color: white;
+      box-shadow: 0 0.5em 0.5em -0.4em black;
+      transform: translateY(-0.25em);
+      cursor: pointer; }
+  
+  .portada-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2%; }
+  
+  #nuestra-trayectoria, #tel-contacto {
+    text-align: center; }
+  
+  .redes{
+    max-width: 3%;   
+    max-height: 3%
+  } 
+  
+  #linkedin{
+      @extend .redes;
+  } 
+  
+  .redes-1 {
+    @extend .redes; }
+  
+  footer {
+    text-align: center; }
+  
+   #img-trayectoria1{
+    grid-area: trayectoria1;
+    text-align: justify;
+   }
+  
+   #img-trayectoria2{
+    grid-area: trayectoria2;
+    text-align: justify;
+   }
+  
+   #img-trayectoria3{
+    grid-area: trayectoria3;
+    text-align: justify;
+   }
+  
+   #p-trayectoria1{
+    grid-area: ptrayectoria1;
+    text-align: justify;
+    padding: 0px;
+   }
+  
+   #p-trayectoria2{
+    grid-area: ptrayectoria2;
+    text-align: justify;
+    padding: 0px;
+   }
+  
+   #p-trayectoria3{
+    grid-area: ptrayectoria3;
+    text-align: justify;
+    padding: 0px;
+   }
+  
+  
+  
+    .Trayectoria_Padre{
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 3%;
+      display: grid;
+      column-gap: 20px;
+      grid-template-areas: "trayectoria1 trayectoria2 trayectoria3"
+                           "ptrayectoria1 ptrayectoria2 ptrayectoria3" 
+    
+    }
+  
+    @media screen and (min-width: 601px) {
+      .Trayectoria_Padre {
+        display: grid;
+        grid-template-areas: "trayectoria1 trayectoria2 trayectoria3"
+                             "ptrayectoria1 ptrayectoria2 ptrayectoria3" ;
+        justify-items: center;
+        } }
+    
+    @media screen and (min-width: 992px) {
+      
+      .Trayectoria_Padre {
+        display: grid;
+        grid-template-areas: "trayectoria1 trayectoria2 trayectoria3"
+                             "ptrayectoria1 ptrayectoria2 ptrayectoria3";
+        justify-items: center;
+         } }
+    
+    @media only screen and (max-width: 600px) {
+     
+      .Trayectoria_Padre {
+        display: grid;
+        grid-template-areas: "trayectoria1" 
+                             "ptrayectoria1"
+                             "trayectoria2"
+                             "ptrayectoria2"
+                             "trayectoria3"
+                             "ptrayectoria3";
+        justify-items: center;
+        align-content: center; } }
+  
+  /*----------------------------------------------------html equipo abajo--------------------------------------*/
+  @mixin estiloImagen{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2%;
+}
+  
+  .equipo-header {
+    background-color: white;
+    text-align: center; }
+  
+  #abogado1{
+    grid-area: abogado1;
+    text-align: center;
+  }
+  
+  #abogado2{
+    grid-area: abogado2;
+    text-align: center;
+  }
+  
+  #img-abog-1 {
+    grid-area: img-abog-1;
+    @include estiloImagen; }
+  
+  #img-abog-2 {
+    grid-area: img-abog-2;
+    @include estiloImagen; }
+  
+  #detalle1{
+    grid-area: detalle1;
+    text-align: justify;
+  }
+  
+  #detalle2{
+    grid-area: detalle2;
+    text-align: justify;
+  }
+  
+  #redesJuntas{
+    width: 25%;
+    height: 80%;
+    grid-area: redesJuntas;
+  }
+  
+  #redesJuntas1{
+    width: 25%;
+    height: 80%;
+    grid-area: redesJuntas1;
+  }
+  
+  .equipo-padre{
+    display: grid;
+    column-gap: 20px;
+    grid-template-areas: "abogado1 abogado2"
+                         "img-abog-1 img-abog-2"
+                         "detalle1 detalle2"
+                         "redesJuntas redesJuntas1";                      
+    }
+  
+  @media screen and (min-width: 601px) {
+    .equipo-padre{
+      display: grid;
+      column-gap: 20px;
+      grid-template-areas: "abogado1 abogado2"
+                           "img-abog-1 img-abog-2"
+                           "detalle1 detalle2"
+                           "redesJuntas redesJuntas1";
+    justify-items: center;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .equipo-padre{
+      display: grid;
+      column-gap: 20px;
+      grid-template-areas: "abogado1 abogado2"
+                           "img-abog-1 img-abog-2"
+                           "detalle1 detalle2"
+                           "redesJuntas redesJuntas1";
+    justify-items: center;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .equipo-padre{
+      display: grid;
+      grid-template-areas: "abogado1"
+                           "img-abog-1"
+                           "detalle1"
+                           "redesJuntas"
+                           "abogado2"
+                           "img-abog-2"
+                           "detalle2"
+                           "redesJuntas1";
+      justify-items: center;
+    }
+  }
+  .video_Presentacion{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  iframe {
+  border-radius: 2%; 
+  max-width: 60%;
+  max-height: 60%;
+  }
+  
+  
+  /*------------------------------------------------------html servicios abajo------------------------------------*/
+  main {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(grey, #c2bfbf); }
+  
+  h2 {
+    text-align: center; }
+  
+  .servicios_Padre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+  
+  .servicios_Imagen {
+    @include estiloImagen; }
+  
+  .servicios_Titulo {
+    text-align: center;
+    font-size: 60px; }
+  
+  #titulo_Areas {
+    text-align: center; }
+  
+  #serviciosDiv{
+    @extend #textoDiv;
+    padding-top: 3%;
+  }
+
+  .servicios_fuero {
+    text-align: center; }
+  
+  .servicios_Padre1 {
+    margin-top: 40px;
+    display: grid;
+    padding-left: 5%;
+    padding-right: 5%;
+    /*grid-template-columns: 30% 30% 30%; */
+    /*grid-template-rows: 200px 200px 200px; */
+    grid-template-areas: "civil laboral penal"
+   "img-civil img-laboral img-penal"
+   "p-civil p-laboral p-penal";
+    column-gap: 20px;
+    justify-items: center;
+     }
+  
+  #servicios-fuerocivil {
+    grid-area: civil;
+    text-align: justify; 
+    align-items: justify;
+    align-content: justify;
+    padding: 0%;}
+  
+  #servicios-fuerolaboral {
+    grid-area: laboral;
+    text-align: justify;
+    align-items: justify;
+    align-content: justify;
+    padding:0% }
+  
+  #servicios-fueropenal {
+    grid-area: penal;
+    text-align: justify;
+    align-items: justify;
+    align-content: justify;
+    padding: 0% }
+  
+  .servicios-imgcivil {
+    grid-area: img-civil;
+    @include estiloTrayectoriaImagen; }
+  
+  .servicios-imglaboral {
+    grid-area: img-laboral;
+    @include estiloTrayectoriaImagen; }
+  
+  .servicios-imgpenal {
+    grid-area: img-penal;
+    @include estiloTrayectoriaImagen; }
+  
+  .servicios_civil {
+    grid-area: p-civil;
+    text-align: justify;
+    align-items: justify; 
+    align-content: justify;
+    padding: 0%;}
+  
+  .servicios_laboral {
+    grid-area: p-laboral;
+    text-align: justify;
+    align-items: justify; 
+    align-content: justify;
+    padding: 0%;
+   }
+  
+  .servicios_penal {
+    grid-area: p-penal;
+    text-align: justify;
+    align-items: justify; 
+    align-content: justify;
+    padding: 0%; }
+  
+  @media screen and (min-width: 601px) {
+    .servicios_Padre1 {
+      grid-template-areas: "civil laboral penal"
+   "img-civil img-laboral img-penal"
+   "p-civil p-laboral p-penal";
+       } }
+  
+  @media screen and (min-width: 992px) {
+    
+    .servicios_Padre1 {
+      /*grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 600px 600px 600px;
+      */
+      grid-template-areas: "civil laboral penal"
+   "img-civil img-laboral img-penal"
+   "p-civil p-laboral p-penal";
+       } }
+  
+  @media only screen and (max-width: 600px) {
+    
+    .servicios_Padre1 {
+      grid-template-areas: 
+    "civil" 
+   "img-civil"
+   "p-civil"
+   "laboral"
+   "img-laboral"
+   "p-laboral"
+   "penal"
+   "img-penal"
+   "p-penal";
+       } }
+  
+  #img-linkedin1 {
+    height: 4%;
+    width: 4%; }
+  
+  /*--------------------- html mision abajo---------------------------------------*/
+  main {
+    display: flex;
+    flex-direction: column; }
+  
+  .h2_Mision {
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  
+  #imagen_Tribunalescba {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px; }
+  
+    #mision{
+      text-align: justify;
+    }
+  
+    #misionp{
+      text-align: justify;
+      @extend #textoDiv;
+      padding-top: 3%;
+      padding-bottom: 2%; 
+    }
+  
+  
+  /*--------------------- html contacto abajo---------------------------------------*/
+  .contacto {
+    display: flex;
+    flex-direction: column; }
+  
+  .contacto__parrafo {
+    text-align: center;
+    padding-bottom: 0px; }
+  
+  .contacto__genero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px; }
+  
+  .contacto__textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  
+  #label_consulta {
+    text-align: center;
+    margin-top: 20px; }
+  
+  .ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center; }
+  
+  .imagenOficina {
+    height: 90%;
+    width: 90%;
+    border-radius: 5%; }
+  
+  textarea {
+    border-radius: 2%; }
+  
+  #Boton-enviar {
+    text-align: center; 
+    &:hover{
+        border-color: black;
+        color: black;
+        box-shadow: 0 0.5em 0.5em -0.4em black;
+        transform: translateY(-0.25em);
+        cursor: pointer;
+      
+        }
+    }
+  .Boton-section {
+    text-align: center; }
+  
+  #envie-consulta {
+    text-align: center; }
+  
+  #maps1{
+    grid-area: div1;
+    
+  }
+  
+  #maps2{
+    grid-area: div3;
+    
+  }
+  
+  #maps3{
+    padding-top: 0%;
+    padding-bottom: 0%;
+    grid-area: div3;
+    
+  }
+  
+  #maps4{
+    grid-area: div4;
+    
+  }
+  
+  
+  .mapsPadre{
+    display: grid;
+    grid-template-areas: "div3" ;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+    
+  }
+  
+  
+  
+    #googleMaps{
+    height: 500px;
+    width:  1000px;
+    border-radius: 5%;
+  
+  }
